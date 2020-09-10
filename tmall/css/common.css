@@ -1,0 +1,20 @@
+/* 通用样式 */
+/*样式重置*/
+/*body 自带 2px 的内边距*/
+/*body{*/
+/*    margin: 0;*/
+/*}*/
+/* *号选中网页所有元素  */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* 去掉 列表前面的点*/
+li{
+    list-style: none;
+}
+/*去掉超链接下划线*/
+a{
+    text-decoration: none;
+}
