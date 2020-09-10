@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* 第二种写法 内部样式 使用style标签来写 html和css 分离 */
+        div{
+            background: green;
+            color: white;
+        }
+        #div1{
+            color: aqua;
+        }
+        #h11{
+            color: red;
+        }
+        .bg{
+            background: black;
+        }
+
+        /*#ul1 li{*/
+        /*    background: red;*/
+        /*}*/
+        /*#ul1 .menu{*/
+        /*    background: red;*/
+        /*}*/
+        #ul1 > .menu{
+            background: red;
+        }
+    </style>
+    <!--  第三种写法 外部样式  直接创建css文件来写  然后用link进行引入文件  代码分离 -->
+    <link rel="stylesheet" href="3_style.css">
+</head>
+<body>
+    <!-- css 第一种写法 使用标签来写 style  内联样式  可维护性可读性差 -->
+    <div>divdiv</div>
+    <div id="div1" class="bg">divdiv</div>
+    <h1 style="background: red;">h1h1</h1>
+    <h2>h2h2</h2>
+    <h1 id="h11" class="bg">h1111111</h1>
+
+<!--    li{$}*4 -->
+    <ul id="ul1">
+        <li>1
+            <ul>
+                <li class="menu">aa</li>
+                <li>bb</li>
+                <li>cc</li>
+            </ul>
+        </li>
+        <li>2</li>
+        <li class="menu">3</li>
+        <li>4</li>
+    </ul>
+
+    <ul id="ul2">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</body>
+</html>
+
+<!--
+    css选择器
+    1.标签选择器/元素选择器
+    div{
+            background: green;
+            color: white;
+        }
+    2.id选择器 id是唯一的不能重复的
+    #div1{
+            background: pink;
+            color: aqua;
+        }
+    3.class选择器  可以重复的
+    class="bg"
+    .bg{
+            background: black;
+        }
+    4. 后代选择器（选中所有后代）
+    #ul1 li{
+            background: red;
+        }
+    5. 亲子代选择器（选中第一层后代）  IE6 不支持
+    #ul1 > .menu{
+            background: red;
+        }
+
+
+    权重值： id > class > tag(标签)
+-->
