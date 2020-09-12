@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body{
+            margin: 0;
+        }
+
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background: #00ff00;
+        }
+        #div3{
+            width: 200px;
+            height: 200px;
+            background: #0000ff;
+        }
+
+        #div1,#div2,#div3{
+            /*左浮动 浮动元素脱离文档流*/
+            float: left;
+        }
+    /*  浮动元素脱离文档流 浮动会导致坍塌（使父物体没有高度） 从而使父物体的兄弟占到服务器的位置 从而导致不正确
+浮动 可以理解为 浮动的物体已经不在一个平面上了 不能把父物体撑开了
+https://www.w3school.com.cn/css/css_positioning_floating.asp
+*/
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+    </div>
+    <h1>是一个标题</h1>
+</body>
+</html>
