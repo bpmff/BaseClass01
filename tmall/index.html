@@ -10,32 +10,48 @@
 </head>
 <body>
     <div id="header">
-        <p id="login-info">
-            <!--div 是块级元素 不合适  span 行级元素相对合适一些-->
-            <span>喵，欢迎来天猫</span>
-            <a href="">请登录</a>
-            <a href="">免费注册</a>
-        </p>
-        <ul id="quick-menu">
-            <li>
+        <div class="wrapper">
+            <p id="login-info">
+                <!--div 是块级元素 不合适  span 行级元素相对合适一些-->
+                <span>喵，欢迎来天猫</span>
+                <a href="">请登录</a>
+                <a href="">免费注册</a>
+            </p>
+            <ul id="quick-menu">
+            <li class="menu">
                 <a href="">我的淘宝</a>
             </li>
-            <li>
+            <li class="menu">
                 <a href="">购物车0件</a>
             </li>
-            <li>
+            <li class="menu">
                 <a href="">手机版</a>
             </li>
-            <li>
+            <li class="menu">
                 <a href="">淘宝网</a>
             </li>
-            <li>
+            <li class="menu">
                 <a href="">商家支持</a>
             </li>
-            <li>
+            <li class="menu">
                 <a href="">网站导航</a>
             </li>
         </ul>
+        </div>
     </div>
 </body>
 </html>
+
+<!--
+    9/12
+    div header 块级元素  宽度沾满整个元素
+    中间元素需要居中显示 所以加了一个 div  wrapper
+    wrapper 中元素 需要 靠左显示一部分 靠右显示一部分
+    所以 加了 p login-info   ul quick-menu
+    但是 p 和ul 都是块级元素 需求是需要横着显示
+    需要加浮动  ul中的每个li 都需要 横着显示所以每个li 都加了浮动
+    css 中font-size 设置了字体大小
+    header 中的元素需要垂直居中  所以  line-height: 32px; /* 单行文字垂直居中  需要 行高等于 高度 */
+    鼠标移动到字体位置需要改变颜色为红色 所以加了 伪类选择器  #header a:hover{color: #ff0036;}
+
+-->
