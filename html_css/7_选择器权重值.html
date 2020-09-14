@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            background: #ff0000;
+        }
+        .div1{
+            background: #00ff00;
+        }
+        /*div{*/
+        /*    background: #ffff00!important;*/
+        /*}*/
+        #div2 .div3{
+            background: #ff0000;
+        }
+        #div2 div{
+            background: #00ff00;
+        }
+
+        .aa{
+            background: #ff0000;
+        }
+        .bb{
+            background: #00ff00;
+        }
+
+        div{
+            background: #ff0000;
+        }
+        .aa.bb{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id = "div1" class="div1" style="background: #cccccc">
+        BPMF
+    </div>
+    <div id="div2">
+        <div class="div3">div</div>
+    </div>
+
+    <div class="aa bb">BPMF</div>
+
+    <div class="cc">BPMF</div>
+    <div>学习</div>
+    <h1 class="cc">!!!!!!</h1>
+
+</body>
+</html>
+
+<!--
+    权重值
+    important > 内联 > id > class > tag
+
+    权重值可以认为是叠加的 如
+    id：100 > class：10 > tag：1
+    #div2 .div3{background: #ff0000;} 100+10
+    #div2 div{background: #00ff00;}100+1
+
+    权重一样的时候 后面的会覆盖前面的
+    <div class="aa bb">BPMF</div>
+    .aa{// 前面
+            background: #ff0000;
+        }
+    .bb{// 后面
+        background: #00ff00;
+    }
+
+-->

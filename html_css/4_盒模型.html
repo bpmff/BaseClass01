@@ -4,19 +4,103 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        #div1{
+        /*#div1{*/
+        /*    width: 200px;*/
+        /*    height: 200px;*/
+        /*    background: #ff0000;*/
+        /*    padding: 50px 60px 70px 80px;*/
+        /*    border: 10px solid #000;*/
+        /*    margin: 50px;*/
+        /*}*/
+
+
+        /*#div1{*/
+        /*    width: 200px;*/
+        /*    height: 200px;*/
+        /*    background: #00ff00;*/
+        /*    margin-bottom: 100px;*/
+        /*}*/
+
+        /*#div2{*/
+        /*    width: 200px;*/
+        /*    height: 200px;*/
+        /*    background: #ff0000;*/
+        /*    margin-top: 100px;*/
+        /*}*/
+
+        #div3{
+            width: 400px;
+            height: 400px;
+            background: #00ff00;
+
+            /*float: left;*/
+            overflow: hidden;
+        }
+
+        #div4{
             width: 200px;
             height: 200px;
             background: #ff0000;
-            padding: 50px 60px 70px 80px;
-            border: 10px solid #000;
-            margin: 50px;
+            margin-top: 100px;
+        }
+
+        #div5{
+            width: 100px;
+            border: 1px solid;
+            overflow: hidden;
         }
 
     </style>
 </head>
 <!-- body 默认自带8px的内边框 -->
 <body>
-    <div id="div1">div</div>
+<!--    <div id="div1">div1</div>-->
+<!--    <div id="div2">div2</div>-->
+
+    <div id="div3">
+        <div id="div4"></div>
+    </div>
+
+    <div id="div5">
+        dasfsafsafjaslkgjlaksfjasljflas
+<!--        dasfsa fsa fjaslkg jlaks fjasl jflas-->
+<!--        发哈萨克就发哈数据开放接口撒谎反抗精神-->
+    </div>
 </body>
 </html>
+
+<!--
+    1.上线外边距合并问题（兄弟关系时）
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+            margin-top: 100px;
+        }
+
+        #div2{
+            width: 200px;
+            height: 200px;
+            background: #00ff00;
+            margin-bottom: 100px;
+        }
+        不是相加 而是取最大值
+
+    2. 子父级关系时  给子级 加上外边框边距时
+       父级会跟着子级一起动
+    解决方式： 给父物体加浮动 float: left;
+    给父物体加溢出overflow  属性规定当内容溢出元素框时发生的事情。
+    overflow: hidden;
+
+    3. 溢出
+    英文 如果是一长串没有空格  判断是一个单词 那么就会溢出到块的外面
+    如果有空格或者是中文  那么会自动换行
+        <div id="div5">
+            dasfsafsafjaslkgjlaksfjasljflas
+            dasfsa fsa fjaslkg jlaks fjasl jflas
+            发哈萨克就发哈数据开放接口撒谎反抗精神
+        </div>
+    如果设置overflow: hidden; 那么会将溢出的部分隐藏
+
+    BFC
+-->

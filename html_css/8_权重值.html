@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .a .b .c .d .e .f .g .h .i .j .k .l{
+            background: #ff0000;
+        }
+
+        #m{
+            background: #00ff00;
+        }
+        /*  选择器 逐级比较 从右往左找  important > 内联 > id > class > tag */
+    </style>
+</head>
+<body>
+    <div class="a">
+        <div class="b">
+            <div class="c">
+                <div class="d">
+                    <div class="e">
+                        <div class="f">
+                            <div class="g">
+                                <div class="h">
+                                    <div class="i">
+                                        <div class="j">
+                                            <div class="k">
+                                                <div class="l" id="m">bpmf</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
