@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            height: 2000px;
+        }
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background: #00ff00;
+            position: fixed;
+            top: 100px;
+            left: 100px;
+        }
+        #div3{
+            width: 200px;
+            height: 200px;
+            background: #0000ff;
+        }
+
+        #div7{
+            height: 50px;
+            background: #ff7200;
+            margin-top: 100px;
+            position:  sticky;
+            top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+    </div>
+    <div id="div7">
+
+    </div>
+</body>
+</html>
+
+<!--
+CSS 定位 (Positioning) 属性允许你对元素进行定位。
+对于定位来说 position 默认值为 static
+relative相对定位  相对于自己的初始位置  不脱离文档流
+#div2{
+    width: 200px;
+    height: 200px;
+    background: #00ff00;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+absolute   绝对定位  脱离文档流
+相对离他最近的 已经定位的 祖先级元素
+如果祖先元素都没定位就相对于body定位
+#div2{
+    width: 200px;
+    height: 200px;
+    background: #00ff00;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+fixed  相对于当前的视口 小浮窗的效果 早期浏览器不支持
+脱离文档流
+sticky  粘性定位 到达阈值就顶住 不随着页面滚动
+#div7{
+    height: 50px;
+    background: #ff7200;
+    margin-top: 100px;
+    position:  sticky;
+    top: 50px;
+}
+-->

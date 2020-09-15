@@ -5,7 +5,7 @@
     <title>Title</title>
 
     <style>
-        body{
+        *{
             margin: 0;
         }
 
@@ -25,14 +25,18 @@
             background: #0000ff;
         }
 
+        /*  浮动元素脱离文档流 浮动会导致坍塌（使父物体没有高度） 从而使父物体的兄弟占到服务器的位置 从而导致不正确
+            浮动 可以理解为 浮动的物体已经不在一个平面上了 不能把父物体撑开了
+            https://www.w3school.com.cn/css/css_positioning_floating.asp
+        */
         #div1,#div2,#div3{
             /*左浮动 浮动元素脱离文档流*/
             float: left;
         }
-    /*  浮动元素脱离文档流 浮动会导致坍塌（使父物体没有高度） 从而使父物体的兄弟占到服务器的位置 从而导致不正确
-浮动 可以理解为 浮动的物体已经不在一个平面上了 不能把父物体撑开了
-https://www.w3school.com.cn/css/css_positioning_floating.asp
-*/
+        /*clear: both; 清除浮动*/
+        h1{
+            clear: both;
+        }
     </style>
 </head>
 <body>
