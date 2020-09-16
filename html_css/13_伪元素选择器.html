@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+    <!--  伪元素选择器  css3  有兼容性问题 after后面插入before前面插入-->
+    <style>
+        <!--  -->
+        #div1::before{
+            /*为元素选择器必须有content属性 插入的是行级元素*/
+            content: 'aa';
+            background: #f00;
+            /*把行级元素转换成块级元素*/
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">bpmf</div>
+</body>
+</html>

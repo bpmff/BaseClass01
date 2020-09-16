@@ -97,6 +97,10 @@
         color: #ff0036;
     }
     8.多类选择器   div.a{}  class 又有aa又有bb   .aa.bb{}
-
+    9.伪元素选择器  css3  有兼容性问题 after后面插入before前面插入
+    #div1::before{
+            /*为元素选择器必须有content属性 插入的是行级元素*/
+            content: 'aa';
+        }
     权重值： id > class > tag(标签)
 -->

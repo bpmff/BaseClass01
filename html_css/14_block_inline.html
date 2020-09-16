@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #block1{
+            width: 200px;
+            height: 200px;
+            background: #f00;
+            /*display: inline;*/
+        }
+        #inline1{
+            width: 200px;
+            height: 200px;
+            background: #0f0;
+            /*行级元素转换成块级元素*/
+            /*display: block;*/
+            /*脱离文档流的属性↓*/
+            /*float: left;*/
+            position: absolute;
+            /*  end  */
+        }
+        /*.aa{*/
+        /*    width: 200px;*/
+        /*    height: 200px;*/
+        /*    background: #cccccc;*/
+        /*    !*float: left;*!*/
+        /*    !* 即是块级元素 又是行级元素 不支持ie6*!*/
+        /*    display: inline-block;*/
+        /*}*/
+        #pic1{
+            width: 300px;
+        }
+
+        #username{
+            width: 120px;
+            height: 30px;
+            /*去掉输入框 选中以后的高亮边*/
+            outline: none;
+        }
+        #ta{
+            /*重置输入区域不能改变大小*/
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+<!--    <div id="block1">块级元素div</div>-->
+<!--    <span id="inline1">行级元素span</span>-->
+<!--    <span>span2</span>-->
+
+<!--    <div class="aa">div1</div><div class="aa">div2</div>-->
+<!--    <div class="aa">div3</div>-->
+<!--    <img src="pic.jpg" alt="" id="pic1">-->
+<!--    <img src="pic.jpg" alt="" id="pic2">-->
+    <form action="bpmf/user">
+        <!--输入框-->
+        <label for="username">用户名：</label>
+        <input type="text" id="username">
+        <!-- br 换行  -->
+        <br>
+        <label for="pwd">
+            密码：
+            <input type="password" id="pwd">
+        </label>
+        <br>
+        <!--单选框-->
+        性别：
+        <input type="radio" name="sex">男
+        <input type="radio" name="sex">女
+        <br>
+        <!--复选框-->
+        爱好：
+        <input type="checkbox" name="hobby">足球
+        <input type="checkbox" name="hobby">篮球
+        <input type="checkbox" name="hobby">排球
+        <br>
+        <select name="" id="">
+            <option value="">aaa</option>
+            <option value="">bbb</option>
+            <option value="">ccc</option>
+        </select>
+        <br>
+        备注:
+        <textarea name="" id="ta" cols="30" rows="10"></textarea>
+        <br>
+        <!--提交按钮-->
+        <input type="submit" value="注册">
+        <!--重置按钮-->
+        <input type="reset" value="重置0">
+    </form>
+</body>
+</html>
+
+
+<!--
+    块级元素block：自己占一行： 标题标签 li ol ul table
+    行级元素inline：行级元素和行级元素 在同一行显示 超链接a span
+    行块级元素 ：img input 占同一行但是能设置宽高
+    img 宽高只设置一个 另一个会等比例缩放
+
+    行级元素转化成块级元素 display: block;
+    块级元素转行级元素  display: inline;
+
+    转行块级元素 display: inline-block; 不支持ie6
+    产生的缝隙是由回车产生的
+    <div class="aa">div1</div><div class="aa">div2</div>
+    <div class="aa">div3</div>
+
+    脱离文档流也可以给行级元素设置宽高
+
+    行级元素 内边距没有问题 外边距只能设置左右不能设置上下
+
+
+-->
